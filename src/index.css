@@ -2,11 +2,69 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   
+}
+nav{
+  background-color: aquamarine;
+}
+nav .choice{
+  background-color: aqua;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.into{
+  display: inline-block;
+  background-color: brown;
+}
+.info{
+  display: inline-block;
+  background-color: yellowgreen;
+}
+
+nav .premieres{
+  background-color: aqua;
+  display: inline-block;
+}
+
+nav .cinema {
+  display: inline-block;
+  background-color: aqua;
+  padding-left: 30px;
+  margin: 10px;
+}
+
+nav .near{
+  display: inline-block;
+  background-color: aqua;
+  margin: 10px;
+}
+
+nav .lookup{
+  display: inline-block;
+  position: absolute;
+  background-color: aqua;
+  margin-top: 20px;
+  right: 5px;
+
 }
 
 .movie img{
   width: 200px;
+  height: 300px;
 }
+
+.movie {
+  display: inline-block;
+  
+}
+
+.category:hover{
+  background-color: bisque;
+}
+
+.Carousel.Item{
+  display: inline-block;
+}
+
 
