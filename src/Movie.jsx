@@ -1,5 +1,5 @@
-import Carousel from 'react-bootstrap/Carousel'
-
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 
 export default function Movie(props) {
@@ -18,15 +18,12 @@ export default function Movie(props) {
     posterImage = 'https://cinema-rest.nodehill.se/' + posterImage;
   
     return (
-      <Carousel.Item className='movie'>
+      <div className='movie'>
         <img src={posterImage} />
-      <Carousel.Caption>
       <h4>{title}</h4>
       <p>{showTime}</p>
-      <p>{length}</p>
-      </Carousel.Caption>
-      
-      </Carousel.Item>
+      <p>{length}</p>   
+      </div>
 
     )
 }

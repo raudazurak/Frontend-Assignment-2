@@ -4,6 +4,9 @@
   font-weight: 400;
   
 }
+
+
+
 nav{
   background-color: aquamarine;
 }
@@ -54,17 +57,26 @@ nav .lookup{
   height: 300px;
 }
 
-.movie {
-  display: inline-block;
-  
-}
+
 
 .category:hover{
   background-color: bisque;
 }
 
-.Carousel.Item{
-  display: inline-block;
+.Carousel{
+  margin-top: 15px;
 }
+
+.redRag{
+  /*margin: 5px;*/
+  margin: auto;
+  max-width: 900px;
+  /*position:relative;*/
+}
+
+.blueRag{
+  margin-top: 100px;
+}
+
 
 
