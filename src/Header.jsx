@@ -4,24 +4,23 @@ export default function Header({Val,setV}) {
       
     const [cat,setCat] = useState('')
   
-    return <div><nav>
-    <div className="choice" onClick={() => setCat(prev => prev === '' ? <Category {...{Val,setV}}/>:'')
+    return <div className="hid"><nav>
+    <div className="leo"><div className="choice" onClick={() => setCat(prev => prev === '' ? <Category {...{Val,setV}}/>:'')
         
        }>
     <h3>Categories</h3>
     </div>
     <div className="premieres">
-    Premier times
-    </div>
+    <h3>Tickets</h3>
+    </div></div>
+    <div className="mid-sec">
     <div className="cinema">
-    <h3>Feature Flix</h3>
-    </div>
+    <h3>Feature Flix Cinema</h3>
+    </div></div>
+    <div className="neo">
     <div className="near">
-    Book
-    </div>
-    <div className="lookup">
-    Search
-    </div>
+    <h3>Search</h3>
+    </div></div>
     </nav>
     <div className="showCats">{cat}</div>
     </div>

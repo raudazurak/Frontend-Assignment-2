@@ -31,6 +31,7 @@ export default function Screenings({Val,setV,element,screening,movies}) {
   
 
   let{ date, titles } = element
+  console.log(element)
 
       
       
@@ -44,6 +45,8 @@ export default function Screenings({Val,setV,element,screening,movies}) {
           )
           //console.log(obj)
         let score = screening.find(item => item.movie === mov)
+
+        
   
         let timer = new Intl.DateTimeFormat('en-GB', {
           weekday: "long",
@@ -53,9 +56,17 @@ export default function Screenings({Val,setV,element,screening,movies}) {
           hour: "numeric",
           minute: "numeric",
         }).format(new Date(`${score.screeningTime}`))
+
+        //score.screeningTime = timer
+
+        /*screening.forEach((item) =>{if(item.movie === mov ){
+          item.bool = true
+      }})*/
   
         obj.showTime = timer
+        //obj.showTime = score.screeningTime
         //console.log(timer)
+        //console.log(obj)
   
         founder.push(obj)   
       }
@@ -74,6 +85,7 @@ export default function Screenings({Val,setV,element,screening,movies}) {
 
     }else{
       foundCat = founder
+      console.log(foundCat)
     }
 
     

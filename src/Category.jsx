@@ -20,9 +20,9 @@ export default function Category({Val,setV}) {
 
     <div className="info">
     {categories.map(({ id, title}) =>
-    <ul className="category" key={id} onClick={()=>setV('inValue',Val.inValue = title)}>
-    <li className='cat-detail' >{title}</li>
-    </ul>
+    <div className="category" key={id} onClick={()=>setV('inValue',Val.inValue = title)}>
+    <div className='cat-detail' >{title}</div>
+    </div>
     )}
     </div> 
     

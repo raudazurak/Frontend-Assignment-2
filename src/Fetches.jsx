@@ -54,6 +54,12 @@ let binder = []
               //hour: "numeric",
               //minute: "numeric",
             }).format(new Date(`${screen.screeningTime}`))
+
+            
+
+            screen.bool = false
+            //console.log(screen)
+
     
             if(element === gTime){ tim.push(screen.movie) }}
 

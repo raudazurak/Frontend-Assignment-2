@@ -20,9 +20,10 @@ export default function Movie(props) {
     return (
       <div className='movie'>
         <img src={posterImage} />
+      <div className='caption'>
       <h4>{title}</h4>
       <p>{showTime}</p>
-      <p>{length}</p>   
+      <p>{length}</p></div>   
       </div>
 
     )

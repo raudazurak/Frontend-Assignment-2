@@ -1,17 +1,58 @@
 :root {
+    
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   
 }
 
+body{
+  background: black;
+  color: white;}
 
+.hid{
+  background-color: rgb(31, 27, 34);
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+}
 
 nav{
-  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.leo{
+  width: 200px;
+}
+
+
+
+nav .choice h3{
+  margin-bottom: 8px;
+}
+
+nav .premieres h3{
+  margin-bottom: 8px;
+}
+
+nav .prems h3{
+  margin-bottom: 8px;
+  margin-top: 13px;
+}
+
+nav .near h3{
+  margin-bottom: 8px;
+  margin-top: 13px;
+}
+
+nav .cinema h3{
+  margin-bottom: 8px;
 }
 nav .choice{
-  background-color: aqua;
   display: inline-block;
   margin-right: 10px;
 }
@@ -22,45 +63,95 @@ nav .choice{
 }
 .info{
   display: inline-block;
-  background-color: yellowgreen;
+  background-color: rgb(55, 59, 45);
 }
 
 nav .premieres{
-  background-color: aqua;
   display: inline-block;
+  
+}
+
+.neo{
+  display: block;
+  width: 100px;
+}
+
+
+nav .prems{
+  display: inline-block;
+  right: 100px;
+  position: absolute;
+  margin-top: 5px;
 }
 
 nav .cinema {
   display: inline-block;
-  background-color: aqua;
-  padding-left: 30px;
-  margin: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 180px;
+  background-color: brown;
+  border-radius: 3px;
+  margin-left: 10px;
 }
+
+
 
 nav .near{
   display: inline-block;
-  background-color: aqua;
-  margin: 10px;
-}
-
-nav .lookup{
-  display: inline-block;
   position: absolute;
-  background-color: aqua;
-  margin-top: 20px;
+  margin-top: 5px;
   right: 5px;
 
 }
 
+
+
 .movie img{
-  width: 200px;
-  height: 300px;
+  width: 210px;
+  height: 250px;
+  padding-left: 5px;
+  padding-top: 5px;
+
+}
+
+.movie{
+  width: 220px;
+  position: static;
+  background-color: rgb(34, 32, 32);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 360px;
+}
+
+.caption{
+  width: 210px;
+  padding-left: 3px;
+}
+
+.caption h4{
+  margin-bottom: 0;
+  margin-top: 2px;
+}
+
+.caption p{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: lighter;
+}
+
+.category{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.cat-detail{
+  margin-top: 0px;
 }
 
 
 
 .category:hover{
-  background-color: bisque;
+  background-color: rgb(91, 78, 61);
 }
 
 .Carousel{
@@ -70,13 +161,21 @@ nav .lookup{
 .redRag{
   /*margin: 5px;*/
   margin: auto;
-  max-width: 900px;
+  max-width: 950px;
   /*position:relative;*/
 }
 
 .blueRag{
-  margin-top: 100px;
+  margin-top: 180px;
 }
+
+.showCats{
+  position: absolute;
+  margin-bottom: 10px;
+}
+
+
+
 
 
 
