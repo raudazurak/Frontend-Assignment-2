@@ -90,6 +90,8 @@ export default function Screenings({Val,setV,element,screening,movies}) {
     }
 
     
+
+    
     
     //console.log(movies)
 
@@ -97,7 +99,7 @@ export default function Screenings({Val,setV,element,screening,movies}) {
     //console.log(foundCat)
     
     return ( 
-            <><h3>{date}</h3>
+            <>{(foundCat.length === 0)? null : <h3>{date}</h3>}
             <Carousel responsive={responsive}>{foundCat.map(({ id, title, description, showTime }) =>    
                <Link className='text-link' to='/booking'><Movie
                 key={id}

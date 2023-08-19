@@ -5,7 +5,7 @@ export default function Header({Val,setV}) {
     const [cat,setCat] = useState('')
   
     return <div className="hid"><nav>
-    <div className="leo"><div className="choice" onClick={() => setCat(prev => prev === '' ? <Category {...{Val,setV}}/>:'')
+    <div className="leo"><div className="choice" onClick={() => setCat(prev => prev === '' ? <Category {...{Val,setV}}/>:'',setV('inValue',Val.inValue = ''))
         
        }>
     <h3>Categories</h3>
@@ -14,7 +14,7 @@ export default function Header({Val,setV}) {
     <h3>Tickets</h3>
     </div></div>
     <div className="mid-sec">
-    <div className="cinema">
+    <div className="cinema"  onClick={()=>setV('inValue',Val.inValue = '')}>
     <h3>Feature Flix Cinema</h3>
     </div></div>
     <div className="neo">

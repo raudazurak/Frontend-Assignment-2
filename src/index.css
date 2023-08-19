@@ -54,7 +54,7 @@ nav .cinema h3{
 }
 nav .choice{
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .into{
@@ -154,9 +154,6 @@ nav .near{
   background-color: rgb(91, 78, 61);
 }
 
-.Carousel{
-  margin-top: 15px;
-}
 
 .redRag{
   /*margin: 5px;*/
