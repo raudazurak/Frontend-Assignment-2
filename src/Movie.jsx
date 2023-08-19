@@ -2,6 +2,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 
+
 export default function Movie(props) {
 
 
@@ -9,6 +10,18 @@ export default function Movie(props) {
     // Destructure props into separate variables
     let { title, description,showTime } = props;
     let { posterImage, length} = description;
+    let Hours = Math.floor(length/60)
+    let mins = length % 60
+
+    let mTime = 0
+
+    if(Hours > 1){
+      mTime = Hours + ' hours ' + mins + ' minutes'
+    }else{
+      mTime = Hours + ' hour ' + mins + ' minutes'
+    }
+
+    
     
 
   //<div className="movie">
@@ -18,12 +31,12 @@ export default function Movie(props) {
     posterImage = 'https://cinema-rest.nodehill.se/' + posterImage;
   
     return (
-      <div className='movie'>
+     <div className='movie'>
         <img src={posterImage} />
       <div className='caption'>
       <h4>{title}</h4>
       <p>{showTime}</p>
-      <p>{length}</p></div>   
+      <p>{mTime}</p></div>   
       </div>
 
     )

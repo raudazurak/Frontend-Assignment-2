@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Movie from './Movie';
@@ -98,10 +99,10 @@ export default function Screenings({Val,setV,element,screening,movies}) {
     return ( 
             <><h3>{date}</h3>
             <Carousel responsive={responsive}>{foundCat.map(({ id, title, description, showTime }) =>    
-              <Movie
+               <Link className='text-link' to='/booking'><Movie
                 key={id}
                 {...{ title, description, showTime }}
-                />
+                /></Link>
               
           )}
     </Carousel>

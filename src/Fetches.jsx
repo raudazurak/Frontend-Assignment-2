@@ -58,7 +58,7 @@ let binder = []
             
 
             screen.bool = false
-            //console.log(screen)
+            
 
     
             if(element === gTime){ tim.push(screen.movie) }}
