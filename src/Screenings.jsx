@@ -32,7 +32,7 @@ export default function Screenings({Val,setV,element,screening,movies}) {
   
 
   let{ date, titles } = element
-  console.log(element)
+  //console.log(element)
 
       
       
@@ -42,7 +42,8 @@ export default function Screenings({Val,setV,element,screening,movies}) {
       for (let index = 0; index < titles.length; index++) {
         const mov = titles[index];
         //console.log(mov)
-        let obj = movies.find(item => item.title === mov
+        let obj = movies.find(item => item.title === mov 
+          
           )
           //console.log(obj)
         let score = screening.find(item => item.movie === mov)

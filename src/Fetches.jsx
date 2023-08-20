@@ -38,10 +38,12 @@ let binder = []
 
          setTimes([...new Set(withDuplicates)])
 
+         movies.map(mov => mov.bool = false)
+         console.log(movies)
+
          for (let index = 0; index < times.length; index++) {
           const element = times[index];
           let tim = []
-          //console.log('purple')
 
 
           for (let screen of screening ){
@@ -54,6 +56,15 @@ let binder = []
               //hour: "numeric",
               //minute: "numeric",
             }).format(new Date(`${screen.screeningTime}`))
+
+            console.log(new Intl.DateTimeFormat('en-GB', {
+              //weekday: "long",
+              //year: "numeric",
+              //month: "long",
+              //day: "numeric",
+              hour: "numeric",
+              minute: "numeric",
+            }).format(new Date(`${screen.screeningTime}`)))
 
             
 
@@ -75,7 +86,7 @@ let binder = []
 
      
 
-    return(
+    return( View.length === 0 ? null:
         <div className='blueRag'>
     
     {View.map(element => 
