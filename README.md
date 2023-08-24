@@ -25,8 +25,8 @@ This component first de-structures the props into title, description and showtim
 It is a route in the app component that, redirects user to a new page when a movie is being clicked on.
  
 ### Installation instructions 
-Clone the gitlink of the project.
-Open the project in vs code, run npm install in the terminal.
-Then, npm run dev and “control” + click the link of the localhost path to the browser to view the project. 
+* Clone the gitlink of the project.
+* Open the project in vs code, run npm install in the terminal.
+* Then, npm run dev and “control” + click the link of the localhost path to the browser to view the project. 
 
 
