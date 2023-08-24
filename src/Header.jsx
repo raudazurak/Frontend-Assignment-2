@@ -14,7 +14,7 @@ export default function Header({Val,setV}) {
     <h3>Tickets</h3>
     </div></div>
     <div className="mid-sec">
-    <div className="cinema"  onClick={()=>setV('inValue',Val.inValue = '')}>
+    <div className="cinema">
     <h3>Feature Flix Cinema</h3>
     </div></div>
     <div className="neo">

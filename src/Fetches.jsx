@@ -15,10 +15,7 @@ let binder = []
 
     
     useEffect(() => {
-        // Self-executing asyncronous anonomyous function
         (async () => {
-          // Fetch all the movies from the REST api
-          // and store them in the state variable movies
           
           setScreen(await (await (fetch('/api/screenings_overview'))).json());
           setMovies(await (await (fetch('/api/movies'))).json());
@@ -38,9 +35,7 @@ let binder = []
 
          setTimes([...new Set(withDuplicates)])
 
-         movies.map(mov => mov.bool = false)
-         console.log(movies)
-
+        
          for (let index = 0; index < times.length; index++) {
           const element = times[index];
           let tim = []
@@ -57,22 +52,17 @@ let binder = []
               //minute: "numeric",
             }).format(new Date(`${screen.screeningTime}`))
 
-            console.log(new Intl.DateTimeFormat('en-GB', {
-              //weekday: "long",
-              //year: "numeric",
-              //month: "long",
-              //day: "numeric",
-              hour: "numeric",
-              minute: "numeric",
-            }).format(new Date(`${screen.screeningTime}`)))
-
             
 
-            screen.bool = false
+          
+
+
+           
             
 
     
-            if(element === gTime){ tim.push(screen.movie) }}
+            if(element === gTime){
+               tim.push(screen.screeningId) }}
 
           binder.push({"id": digit++,"date": element,
           "titles": tim

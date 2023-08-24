@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Movie from './Movie';
-
+import './utilities/auto-key-lists'
 export default function Screenings({Val,setV,element,screening,movies}) {
 
   const responsive = {
@@ -32,21 +32,17 @@ export default function Screenings({Val,setV,element,screening,movies}) {
   
 
   let{ date, titles } = element
-  //console.log(element)
 
-      
-      
-      //console.log('blue')
-      //console.log(movies)
+
 
       for (let index = 0; index < titles.length; index++) {
         const mov = titles[index];
-        //console.log(mov)
-        let obj = movies.find(item => item.title === mov 
-          
-          )
-          //console.log(obj)
-        let score = screening.find(item => item.movie === mov)
+        
+        let score = screening.find(item => item.screeningId === mov)
+
+        
+        let obj = movies.find(item => item.title === score.movie )
+
 
         
   
@@ -59,16 +55,10 @@ export default function Screenings({Val,setV,element,screening,movies}) {
           minute: "numeric",
         }).format(new Date(`${score.screeningTime}`))
 
-        //score.screeningTime = timer
-
-        /*screening.forEach((item) =>{if(item.movie === mov ){
-          item.bool = true
-      }})*/
   
         obj.showTime = timer
-        //obj.showTime = score.screeningTime
-        //console.log(timer)
-        //console.log(obj)
+        obj.screenId = score.screeningId
+        
   
         founder.push(obj)   
       }
@@ -87,24 +77,16 @@ export default function Screenings({Val,setV,element,screening,movies}) {
 
     }else{
       foundCat = founder
-      console.log(foundCat)
     }
 
-    
 
-    
-    
-    //console.log(movies)
-
-
-    //console.log(foundCat)
     
     return ( 
             <>{(foundCat.length === 0)? null : <h3>{date}</h3>}
-            <Carousel responsive={responsive}>{foundCat.map(({ id, title, description, showTime }) =>    
+            <Carousel responsive={responsive}>{foundCat.map(({ id, title, description, showTime,screenId }) =>    
                <Link className='text-link' to='/booking'><Movie
                 key={id}
-                {...{ title, description, showTime, Val, setV,id }}
+                {...{ title, description, showTime, Val, setV, screenId }}
                 /></Link>
               
           )}
