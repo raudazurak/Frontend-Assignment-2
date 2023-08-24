@@ -22,7 +22,7 @@ De-structures the view object that consists of date and titles array. From the m
 This component first de-structures the props into title, description and showtime. Then the description is de-structured into poster Image and length. The length is then converted to hours and minutes. Finally in the return fragment, we have the poster image, then the name, show time which is the date and time of the movie and then the converted length of the movie.
 
 #### Booking Component.
-It is a route in the app component that, redirects user to a new page when a movie is being clicked on.
+It is a route in the app component that, redirects user to a new page when a movie is being clicked on. It displays the seats in the cinema.
  
 ### Installation instructions 
 * Clone the gitlink of the project.
