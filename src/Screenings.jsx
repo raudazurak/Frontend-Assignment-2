@@ -43,9 +43,6 @@ export default function Screenings({Val,setV,element,screening,movies}) {
         
         let obj = movies.find(item => item.title === score.movie )
 
-
-        
-  
         let timer = new Intl.DateTimeFormat('en-GB', {
           weekday: "long",
           year: "numeric",
