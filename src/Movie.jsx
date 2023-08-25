@@ -6,7 +6,7 @@ import 'react-multi-carousel/lib/styles.css';
 export default function Movie(props) {
 
     // Destructure props into separate variables
-    let { title, description,showTime,id, Val, setV} = props;
+    let { title, description,showTime,screenId, Val, setV} = props;
     let { posterImage, length} = description;
     let Hours = Math.floor(length/60)
     let mins = length % 60
@@ -19,6 +19,7 @@ export default function Movie(props) {
       mTime = Hours + ' hour ' + mins + ' minutes'
     }
 
+
     
     
 
@@ -29,7 +30,7 @@ export default function Movie(props) {
     posterImage = 'https://cinema-rest.nodehill.se/' + posterImage;
   
     return (
-     <div className='movie' onClick={()=>setV('idValue',Val.idValue = id)}>
+     <div className='movie' onClick={()=>setV('idValue',Val.idValue = screenId)}>
         <img src={posterImage} />
       <div className='caption'>
       <h4>{title}</h4>
